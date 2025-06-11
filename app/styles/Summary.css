@@ -1,0 +1,47 @@
+.summary-card {
+    background-color: #2f3640;
+    color: #f5f6fa;
+    padding: 20px;
+    margin: 30px auto 10px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.summary-card h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #00a8ff;
+    text-align: center;
+}
+
+.summary-detail {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #4cd137;
+}
+
+@media (max-width: 600px) {
+    .summary-card {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .summary-card h2 {
+        font-size: 20px;
+    }
+
+    .summary-total {
+        font-size: 16px;
+    }
+}

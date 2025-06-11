@@ -1,0 +1,103 @@
+.summary {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.buy-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00a8ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #0097e6;
+  }
+  
+  .message {
+    margin-top: 10px;
+    color: #f5f6fa;
+    font-size: 15px;
+    text-align: center;
+  }
+
+.seat-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #111, #222);
+    min-height: 100vh;
+    gap: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.seat {
+    width: 48px;
+    height: 48px;
+    background-color: #7f8fa6;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.seat:hover {
+    transform: scale(1.05);
+    border-color: #718093;
+}
+
+.seat.selected {
+    background-color: #44bd32;
+}
+
+.seat.booked {
+    background-color: #2f3640;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .seat {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .seat-grid {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seat {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .seat-grid {
+        padding: 10px;
+        gap: 6px;
+    }
+}
