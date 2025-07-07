@@ -18,13 +18,12 @@ function MovieSelector({ onMovieChange}) {
 
     const handleMovieChange = (e) => {
         const movieId = e.target.value;
-        setSelectedMovie(movieId);
         const movie = movies.find(m => m.id === Number(movieId));
-        onMovieChange(movie);
+        setSelectedMovie(movie);
     }
 
     const handleTimeChange = (e) => {
-        selectedTime(e.target.value);
+        setSelectedTime(e.target.value);
     }
 
     return (
@@ -33,7 +32,7 @@ function MovieSelector({ onMovieChange}) {
 
             <select
             className='movie-dropdown'
-            value={selectedMovie}
+            value={selectedMovie ? selectedMovie.id : ''}
             onChange={handleMovieChange}
             >
                 <option value=''>-- Выберите фильм --</option>
@@ -49,7 +48,7 @@ function MovieSelector({ onMovieChange}) {
             className="time-dropdown"
             value={selectedTime}
             onChange={handleTimeChange}
-            disabled={!selectedMovie} // Блокируем, пока не выбран фильм
+            disabled={!selectedMovie} 
           >
             <option value="">-- Выберите время --</option>
             {availableTimes.map((time, index) => (
